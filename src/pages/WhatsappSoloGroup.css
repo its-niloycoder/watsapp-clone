@@ -1,0 +1,62 @@
+body {
+    background-image: url("/assets/chat-bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0; /* Ensure no default margin on body */
+}
+
+/* Full viewport fixed background */
+.background-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Container for scrollable content */
+.scrollable-content {
+    flex-grow: 1;
+    overflow-y: auto; /* Allows vertical scrolling */
+    padding: 20px;
+    background-color: transparent; /* Allows background to show through */
+    display: flex; /* Use flexbox to allow wrapping */
+    flex-direction: column; /* Ensure children stack vertically */
+}
+
+/* Fixed position message prompt at the bottom */
+.message-prompt-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+}
+
+/* Message bubble styles */
+.message-bubble {
+    display: inline-block; /* Allow auto width based on content */
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    max-width: 70%; /* Optional: Limit max width */
+    color: white;
+    word-wrap: break-word; /* Ensures long words wrap */
+}
+
+/* Specific styles for sent and received messages */
+.sent {
+    background-color: #007bff; /* Blue for sent messages */
+    align-self: flex-end; /* Align to the right */
+}
+
+.received {
+    background-color: #6c757d; /* Gray for received messages */
+    align-self: flex-start; /* Align to the left */
+}

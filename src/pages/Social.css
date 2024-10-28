@@ -1,0 +1,9 @@
+.center-image {
+    display: flex;
+    /* align-items: safe; */
+    justify-content: center;
+}
+
+.perfect-logo {
+    margin-right: 50px;
+}
